@@ -1,2 +1,3 @@
-# Projetineo
-loading..
+# Projetíneo
+
+Repositório criado com propósito de estudo/criação de Aplicação Web usando ES6 - fetch API.
