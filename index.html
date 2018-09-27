@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>NewsSearch</title>    
+</head>
+   <body>
+        <header class="container">         
+            <nav id="menu_lat" class="sidenav">   
+                <a class="closebtn" onclick="menuzinho_Close()">&times;</a>
+                <span class="link_busca"><a href="#"><i class="material-icons">search</i>Search</a></span>
+                <a href="#subtitleTech">Tecnologia</a>
+                <a href="#subtitleScience">Ciência</a>
+                <a href="#subtitleMusic">Música</a>
+                <h3>Headlines:</h3> 
+                <a href="#trendArgentina">Argentina</a>
+                <a href="#trend_Brasil">Brasil</a>
+                <a href="#trend_Canada">Canadá</a>
+            </nav>
+                <span class="menulat" onclick="menuzinho_Open()"><i class="material-icons">menu</i></span>  
+                <h1>News Search</h1>
+                <h2>Notícias do mundo.</h2> 
+                <a class="seta" href="#subtitleTech"><span class="menu_direita"><i class="material-icons">arrow_drop_down </i></a></span>
+        </header>
+        <main>
+            <section class="video_header">
+                <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted"><source src="media/videozinho.mp4" type="video/mp4"></video></section>
+            <section id=subtitleTech> <h2>Tech News:</h2></section>
+            <section class="searchTech"></section>
+            <section id="trend_Brasil"><h2>Headlines Brasil:</h2></section>
+            <section class="searchBrasil"></section>
+            <section id=subtitleScience> <h2>Science News:</h2></section>
+            <section class="searchScience"></section>
+            <section id=trendArgentina ><h2>Headlines Argentina</h2></section>
+            <section class="searchArgentina"></section>
+            <section id=subtitleMusic><h2>MTV News:</h2></section>
+            <section class="searchMusic"></section>
+            <section id=trend_Canada ><h2>Headlines Canadá</h2></section>
+            <section class="searchCanada"></section>
+        </main>    
+        <footer>
+            <p class="contat">NewsSearch ©</p>
+            <p><span class="searchnews_footer"></span>Todos os Direitos Reservados, 2018<br>
+            Desenvolvido por <a id="linkgit" href="https://github.com/yanevasquez" target="_blank">Yane Vasquez</a><br>
+           <span><a href="https://newsapi.org/" target="_blank">News API </a></span></p>
+        </footer>
+        <script  src="js/script.js"></script>
+    </body>
+</html>     
