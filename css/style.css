@@ -435,6 +435,20 @@ a#el{
     font-size: 22px
   }
 }
+                                      /*Page 2: search.html*/
+
+input[type=button] {
+  padding: 12px 6px;
+  margin: 20px 3px;
+  border: 1px solid rgb(142, 149, 152);
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  background: #4f7aa3;
+  color:white;
+  display: none;
+
+}
 
                                             /*Footer*/
 footer {

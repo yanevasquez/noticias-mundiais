@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css"> 
     <title>NewsSearch</title>    
 </head>
 <body>
     <section class="coolSearch">
         <input type="search" id ="entrada" placeholder="Informe frase ou palavra chave... ">
-        <button type="button" id ="btn" onClick="hideUpdate()">Buscar</button>
+        <button type="button" id ="btn" onclick="hideUpdate()">Buscar</button>
     </section>
     <section class="returnSearch"></section>
     <form>
-     <input type="button" id="atualiza" value="Nova Pesquisa?" onClick="history.go(0)">
+     <input type="button" id="atualiza" value="Nova Pesquisa?" onclick="history.go(0)">
     </form>                  
  <script  src="js/search.js"></script>
 </body>
