@@ -449,6 +449,27 @@ input[type=button] {
   display: none;
 
 }
+input[type=search] {
+  width: 44%;
+  padding: 12px 6px;
+  margin: 20px 3px;
+  border: 1px solid rgb(142, 149, 152);
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #0ca08e;
+  border-radius: 4px;
+  padding: 9px 17px;
+  text-decoration: none;
+  margin: 5px 2px;
+  cursor: pointer;
+  font-family: -webkit-body;
+  font-size: 18px;
+  border: 1px solid darkgray;
+}
+
 
                                             /*Footer*/
 footer {
