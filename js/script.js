@@ -31,13 +31,21 @@ function imgNews(y) {
     }                    
 }
 
+function cverDate(valor){
+    let result = moment(new Date(`${valor.publishedAt}`)).format('lll')
+    //console.log("aqui:", result)
+    return result
+
+}
+
+
 function technology(){
 	let url = `${url_base}domains=${dominios_tech}&pageSize=12&apiKey=${apiKey}`
     fetch(url)
       .then(res => res.json())
 	  .then(function(data){ 
           let IhuU=data.articles
-          .map(x=> `<section class="noticiadoDiaTech"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiadoDiaTech"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><p>Data<h3>${cverDate(x)}</h3></p></section>`)
           .join(" ")
           show_tech.innerHTML=IhuU
       })
@@ -51,7 +59,7 @@ function musics (){
       .then(res => res.json())
 	  .then(function(data){ 
           let bla=data.articles
-          .map(x=> `<section class="noticiaMTV"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiaMTV"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${cverDate(x)}</h3></section>`)
           .join(" ")
           show_musics.innerHTML=bla
       })
@@ -65,7 +73,7 @@ function science() {
       .then(res => res.json())
 	  .then(function(data){ 
           let vaiaparecerSim=data.articles
-          .map(x=> `<section class="noticiadoDiaScienc"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiadoDiaScienc"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${cverDate(x)}</h3></section>`)
           .join(" ")
           show_scie.innerHTML=vaiaparecerSim
       })
@@ -73,13 +81,19 @@ function science() {
 
 science()
 
+function converDate2(x){
+    let y= moment(new Date(`${x.publishedAt}`)).format('LT')
+    return y
+
+}
+
 function trendBR(){
 	let url = `${dominios_br}${apiKey}&${pageSize}`
 	fetch(url)
       .then(res => res.json())
 	  .then(function(data){ 
           let w=data.articles
-          .map(x=> `<section class="noticiaBr"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiaBr"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${converDate2(x)}</h3></section>`)
           .join(" ")
           show_br.innerHTML=w
       })
@@ -94,7 +108,7 @@ function trendCA(){
       .then(res => res.json())
 	  .then(function(data){ 
           let tatu=data.articles
-          .map(x=> `<section class="noticiaCa"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiaCa"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${converDate2(x)}</h3></section>`)
           .join(" ")
           show_ca.innerHTML=tatu
       })
@@ -108,7 +122,7 @@ function trendAR(){
       .then(res => res.json())
 	  .then(function(data){ 
           let k=data.articles
-          .map(x=> `<section class="noticiaAr"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${x.publishedAt}</h3></section>`)
+          .map(x=> `<section class="noticiaAr"<h1>${link(x)}</h1><p>Fonte: ${x.source.name}</p><h3>${converDate2(x)}</h3></section>`)
           .join(" ")
           show_ar.innerHTML=k
       })
