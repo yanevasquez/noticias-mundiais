@@ -35,9 +35,7 @@ function cverDate(valor){
     let result = moment(new Date(`${valor.publishedAt}`)).format('lll')
     //console.log("aqui:", result)
     return result
-
 }
-
 
 function technology(){
 	let url = `${url_base}domains=${dominios_tech}&pageSize=12&apiKey=${apiKey}`
@@ -45,7 +43,7 @@ function technology(){
       .then(res => res.json())
 	  .then(function(data){ 
           let IhuU=data.articles
-          .map(x=> `<section class="noticiadoDiaTech"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><p>Data<h3>${cverDate(x)}</h3></p></section>`)
+          .map(x=> `<section class="noticiadoDiaTech"<h1>${link(x)}</h1>${imgNews(x)}<h2>${x.description}</h2><p>Fonte: ${x.source.name}</p><h3>${cverDate(x)}</h3></section>`)
           .join(" ")
           show_tech.innerHTML=IhuU
       })
@@ -65,7 +63,7 @@ function musics (){
       })
  }
 
- musics()
+musics()
 
 function science() {
 	let url = `${url_base}sources=${dominios_scie}&pageSize=6&apiKey=${apiKey}`
@@ -84,7 +82,6 @@ science()
 function converDate2(x){
     let y= moment(new Date(`${x.publishedAt}`)).format('LT')
     return y
-
 }
 
 function trendBR(){
@@ -100,7 +97,6 @@ function trendBR(){
     }
 
 trendBR()
-
 
 function trendCA(){
 	let url = `${dominios_ca}${apiKey}&${pageSize}`
