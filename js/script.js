@@ -162,17 +162,10 @@ function allSearch(url){
         .then(json=> ShowNewsSearch(json))      
 }
 
-
 function linksNews(x){
     let foundYOU=`<a id="el" href="${x.url}" target="_blank" onclick= ShowNewsSearch(x)>${x.title}${get_H31(x)}</a>`
     return foundYOU
 }
-
-/*function stringResults(){
-    let text=`<h1>Resultados da pesquisa:</h1>`
-    return text
-}
-*/
 
 function ShowNewsSearch(AllSearch){
     let str = AllSearch.articles
@@ -185,7 +178,6 @@ function get_H31 (x){
     let get=`<h3>Fonte: ${x.source.name}</h3><h2>${cverDate(x)}</h2>`
     return get
 }
-
 
 function hideUpdate(){
     let y = document.getElementById('atualiza');
