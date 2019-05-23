@@ -1,5 +1,5 @@
 {
-  "name": "newssearch",
+  "name": "noticias_domundo",
   "version": "1.0.0",
   "description": "Aplicação que informa notícias do mundo.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yanevasquez/NewsSearch.git"
+    "url": "git+https://github.com/yanevasquez/Noticias_doMundo.git"
   },
   "keywords": [
     "js",
@@ -19,9 +19,9 @@
   "author": "@yanevasquez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yanevasquez/NewsSearch/issues"
+    "url": "https://github.com/yanevasquez/Noticias_doMundo/issues"
   },
-  "homepage": "https://github.com/yanevasquez/NewsSearch#readme",
+  "homepage": "https://yanevasquez.github.io/Noticias_doMundo/",
   "dependencies": {
     "moment": "^2.22.2"
   }
