@@ -1,5 +1,5 @@
 // Api key 
-const apiKey='6156745b40dd41e09cdbff60d3ca579e'
+const apiKey='API_KEY'
 
 // Categorizacao de dominios 
 const url_base="https://newsapi.org/v2/everything?"
@@ -19,7 +19,15 @@ const show_ar=document.querySelector(".searchArgentina")
 const show_musics=document.querySelector(".searchMusic")
 const show_ca=document.querySelector(".searchCanada")
 
-// Funcoes
+//Search
+const url_base3="https://newsapi.org/v2/everything?q="
+
+//Seletores do buscador
+const news_search= document.querySelector(".returnSearch")
+const inputext = document.querySelector("#entrada")
+const bnt1= document.querySelector('#btn')
+
+
 function imgNews(y) {
     let notfound= `<img src="null">`   
     let image=`<img src="${y.urlToImage}">` 
@@ -138,4 +146,54 @@ function menuzinho_Open() {
 function menuzinho_Close() {
     document.getElementById("menu_lat").style.width = "0";
 }
+
+
+//Funções do buscador
+bnt1.addEventListener("click", function(e){
+    e.preventDefault()
+    const grep= inputext.value;
+    allSearch(`${url_base3}${grep}&apiKey=${apiKey}&pageSize=10`)
+
+})
+
+function allSearch(url){
+    fetch(url)
+        .then(res=> res.json())
+        .then(json=> ShowNewsSearch(json))      
+}
+
+
+function linksNews(x){
+    let foundYOU=`<a id="el" href="${x.url}" target="_blank" onclick= ShowNewsSearch(x)>${x.title}${get_H31(x)}</a>`
+    return foundYOU
+}
+
+/*function stringResults(){
+    let text=`<h1>Resultados da pesquisa:</h1>`
+    return text
+}
+*/
+
+function ShowNewsSearch(AllSearch){
+    let str = AllSearch.articles
+        .map(x=> `<div class="blocoPesq">${imgNews(x)}<h1>${linksNews(x)}</h1></div>`)
+        .join(" ")
+        news_search.innerHTML=str
+}
+ 
+function get_H31 (x){
+    let get=`<h3>Fonte: ${x.source.name}</h3><h2>${cverDate(x)}</h2>`
+    return get
+}
+
+
+function hideUpdate(){
+    let y = document.getElementById('atualiza');
+    if (y.style.display==='none') {
+        y.style.display='flex';
+    } else {
+        y.style.display='flex';
+    }
+}
+
 
