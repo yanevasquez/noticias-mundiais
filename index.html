@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css"> 
-    <title>NewsSearch</title>    
+    <title>Notícias</title>    
 </head>
    <body>
         <header class="container">         
+    
             <nav id="menu_lat" class="sidenav">   
                 <a class="closebtn" onclick="menuzinho_Close()">&times;</a>
-                <span class="link_busca"><a href="#"><i class="material-icons">search</i>Search</a></span>
+                <span class="link_busca"><a href="#entrada"><i class="material-icons">search</i>Search</a></span>	
                 <a href="#subtitleTech">Tecnologia</a>
                 <a href="#subtitleScience">Ciência</a>
                 <a href="#subtitleMusic">Música</a>
@@ -22,13 +23,18 @@
                 <a href="#trend_Canada">Canadá</a>
             </nav>
                 <span class="menulat" onclick="menuzinho_Open()"><i class="material-icons">menu</i></span>  
-                <h1>News Search</h1>
-                <h2>Notícias do mundo.</h2> 
-                <a class="seta" href="#subtitleTech"><span class="menu_direita"><i class="material-icons">arrow_drop_down </i></a></span>
+                <div class="header" >
+		<h1>Notícias do Mundo</h1></div>  
         </header>
         <main>
-            <section class="video_header">
-                <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted"><source src="media/videozinho.mp4" type="video/mp4"></video></section>
+            <section class="coolSearch">
+            <input type="search" id ="entrada" placeholder="pesquisar... ">
+            <button type="button" id ="btn" onclick="hideUpdate()">Buscar</button>
+            </section>            
+            <section class="returnSearch"></section>
+            <form>
+                    <input type="button" id="atualiza" value="Nova Pesquisa?" onclick="history.go(0)">
+                        </form>    
             <section id=subtitleTech> <h2>Tech News:</h2></section>
             <section class="searchTech"></section>
             <section id="trend_Brasil"><h2>Headlines Brasil:</h2></section>
@@ -44,7 +50,7 @@
         </main>    
         <footer>
             <p class="contat">NewsSearch ©</p>
-            <p><span class="searchnews_footer"></span>Todos os Direitos Reservados, 2018<br>
+            <p><span class="searchnews_footer"></span>Todos os Direitos Reservados, 2019<br>
             Desenvolvido por <a id="linkgit" href="https://github.com/yanevasquez" target="_blank">Yane Vasquez</a><br>
            <span><a href="https://newsapi.org/" target="_blank">News API </a></span></p>
         </footer>
