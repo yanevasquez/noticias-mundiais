@@ -7,7 +7,7 @@ const url_base2 = "https://newsapi.org/v2/top-headlines?country=ar&apiKey="
 const dominios_ar = "google-news-ar"
 const dominios_ca = "https://newsapi.org/v2/top-headlines?country=ca&apiKey="
 const pageSize = "pageSize=5"
-const apiKey = "9ba064636c5e4a4c88eeac5348a16a6b"
+const apiKey = "YOUR API KEY"
 
 // Seletores
 const show_tech = document.querySelector(".searchTech")
