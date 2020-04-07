@@ -8,20 +8,20 @@ Repositório criado com propósito de estudo/criação de Aplicação *Web* util
 - [x] Fetch API : [newsapi](https://newsapi.org/)
 - [x] Design responsivo
 
-##### 01. Registre sua api key para utilizar a aplicação:
+#### 01. Registre sua api key para utilizar a aplicação:
 
  ##### [Get API key](https://newsapi.org/)
  
-##### 02. Clone o repositório e edite o script.js:
+#### 02. Clone o repositório e edite o script.js:
 ```bash
 $ git clone https://github.com/yanevasquez/noticias-mundiais.git
 $ vim js/script.js 
 ```
-##### 03. Ao entrar no modo de inserção do vim digitando *i*, altere o valor em:
+#### 03. Ao entrar no modo de inserção do vim digitando *i*, altere o valor em:
 ```javascript
 const apiKey = "YOUR API KEY"
 ```
-##### 04. Pressione *Esc* para sair do modo de edição e salve as modificações: 
+#### 04. Pressione *Esc* para sair do modo de edição e salve as modificações: 
 ```bash
 :wq!
 ```
@@ -32,3 +32,5 @@ const apiKey = "YOUR API KEY"
  ### Funcionalidades:
 
 Exibição de manchetes de notícias e pesquisa de artigos de portais mundiais em tempo real. 
+
+
